@@ -8,7 +8,9 @@
 1. 在需要使用的.m文件中import"SSPageView.h"
 然后遵从 BDPageCountViewDelegate, BDPageCountViewDataSource两个协议,接着初始化pageView：
 ```
-   self.countView = [[BDPageCountView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60.f, SCREEN_HEIGHT - 80.f - 64.f, 45.f, 45.f) tableView:self.tableView];            self.countView.delegate = self;     self.countView.dataSource = self;
+   self.countView = [[BDPageCountView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 60.f, SCREEN_HEIGHT - 80.f - 64.f, 45.f, 45.f) tableView:self.tableView];            
+   self.countView.delegate = self;     
+   self.countView.dataSource = self;
    [self.view addSubview:self.countView];
 ``` 
 注意点：要与UITableView配合使用
